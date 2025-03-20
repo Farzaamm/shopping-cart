@@ -8,6 +8,17 @@
         - navbar
         - shopping cart
         - product card
+
+# header
+    -navbar
+
+    **navbar**
+        - home icon + Home
+        - shopping bag icon + Shopping
+
+
+
+
 # home page
 
 # navbar
@@ -35,5 +46,7 @@
                                                     privacy policy
     social media
 
-                    copyright 2025 dfasdfsfsdfsffsf
+                    copyright 2025 dfasdfsfsdfsffsf.
 
+
+# progress
