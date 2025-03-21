@@ -4,19 +4,29 @@ import { House, ShoppingBag, ShoppingCart } from 'lucide-react';
 export default function Header() {
   return (
     <nav>
-      <ul>
+      <ul className='flex'>
         <li>
-         <House />
-          Home
+          <div className='list-item'>
+            <House size={40}/>
+          </div>
+          <div className='list-item'>
+            <a href="">Home</a>
+          </div>
         </li>
         <li>
-          <ShoppingBag />
-          Shopping
+          <div className='list-item'>
+            <ShoppingBag size={40}/>
+          </div>
+          <div className='list-item'>
+            <a href="">Shopping</a>
+          </div>
         </li>
       </ul>
       <ul>
         <li>
-          <ShoppingCart />
+          <div className='list-item'>
+            <ShoppingCart size={40}/>
+          </div>
         </li>
       </ul>
     </nav>
