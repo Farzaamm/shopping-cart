@@ -1,5 +1,6 @@
 import React from 'react'
 import { House, ShoppingBag, ShoppingCart } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
             <House size={40}/>
           </div>
           <div className='list-item'>
-            <a href="">Home</a>
+            <Link to="/" >Home</Link>
           </div>
         </li>
         <li>
@@ -18,14 +19,14 @@ export default function Header() {
             <ShoppingBag size={40}/>
           </div>
           <div className='list-item'>
-            <a href="">Shopping</a>
+            <Link to="shopping">Shopping</Link>
           </div>
         </li>
       </ul>
       <ul>
         <li>
           <div className='list-item'>
-            <ShoppingCart size={40}/>
+            <Link to="cart"><ShoppingCart size={40}/></Link>
           </div>
         </li>
       </ul>

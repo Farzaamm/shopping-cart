@@ -1,13 +1,13 @@
 # components:
-    - home page
+    - home page === <App />
         - header
             - navbar
         - some pix 
         - footer
-    - shopping page
-        - navbar
-        - shopping cart
-        - product card
+~~    - shopping page~~
+       ~~ - navbar~~
+        ~~- shopping cart~~
+       ~~ - product card~~
 
 # header
     -navbar
@@ -15,11 +15,9 @@
     **navbar**
         - home icon + Home
         - shopping bag icon + Shopping
-
-
-
-
-# home page
+    
+    # --use <link /> instead of <a>-- 
+    * clicking on the svg icon doesn't do anything
 
 # navbar
     home
@@ -27,6 +25,8 @@
     shopping cart
 
 # shopping page
+    - navbar
+        !!! when shopping is clicked on the shopping page it throws an error!
     fake product api:
         https://fakestoreapi.com
     ## shopping cart
@@ -36,7 +36,7 @@
     - pic
     - input field for quantity
     - increment / decrement buttons
-    - add to cart button
+    - add to cart button (cart from lucid react)
 
 # footer
     **Shop**                    **company**         **support**
@@ -46,7 +46,25 @@
                                                     privacy policy
     social media
 
-                    copyright 2025 dfasdfsfsdfsffsf.
+                    copyright 2025 Farzam.
 
 
 # progress
+~~ home page ~~
+
+* Header component:
+~~ nav elements ~~
+
+* shopping component: 
+~~ fetch the products from the api ~~
+~~ design the cards accordingly ~~
+~~ put stars instead of text for rating ~~
+~~ cart component
+~~ Add to cart button should add items to the cart
+
+* shopping cart:
+~~ shopping card 
+
+* Footer component:
+~~ footer
+
