@@ -6,6 +6,7 @@ import StarRatings from "react-star-ratings";
 
 export default function Shopping() {
 const [products, setProducts] = useState([])
+const [cartItems, setCartItems] = useState([]) // State to hold cart items
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -14,12 +15,8 @@ const [products, setProducts] = useState([])
   }, [])
 
 
-  const handleClick = () => {
-    console.log('Product added to cart')
-  }
-
-  const handleQuantityChange = (quantity) => { // The quantity is passed from the child component
-    console.log(`Quantity changed to ${quantity}`)
+  const handleAddToCart = (cartItem) => {
+    setCartItems(prevItems => [...prevItems, cartItem]) // Add the product to the cart (or update the cart state)
   }
 
   return (
@@ -45,8 +42,8 @@ const [products, setProducts] = useState([])
             count={product.rating.count}
             // description={product.description}
             price={product.price}
-            onQuantityChange={handleQuantityChange}
-            onClick={() => handleClick()}
+            // onQuantityChange={handleQuantityChange}
+            onClick={handleAddToCart}
           />  
         ))}
       </div>

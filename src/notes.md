@@ -68,3 +68,6 @@
 * Footer component:
 ~~ footer
 
+# errors
+~~ clicking on the shopping in the navbar when in http://localhost:5173/shopping  will take you to **http://localhost:5173/shopping/shopping** !!!
+

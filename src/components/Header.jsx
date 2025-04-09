@@ -19,14 +19,14 @@ export default function Header() {
             <ShoppingBag size={40}/>
           </div>
           <div className='list-item'>
-            <Link to="shopping">Shopping</Link>
+            <Link to="/shopping">Shopping</Link>
           </div>
         </li>
       </ul>
       <ul>
         <li>
           <div className='list-item'>
-            <Link to="cart"><ShoppingCart size={40}/></Link>
+            <Link to="/cart"><ShoppingCart size={40}/></Link>
           </div>
         </li>
       </ul>
