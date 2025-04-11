@@ -15,15 +15,15 @@ export default function ProductCard({
 }) {
 
   const [quantity, setQuantity] = useState(1)
+  
   const handleChange = (e) => {
     const newQuantity = parseInt(e.target.value, 10) // Convert to integer (base 10) to avoid problems when getting total price
     setQuantity(newQuantity)
-    // onQuantityChange(newQuantity) // Pass the quantity to the parent component
+ 
   }
 // Save the product details when the user clicks the "Add to Cart" button to be used in the parent component
   const handleAddToCart = () => {
     onClick({category, id, image, title, description, price, quantity}); // Call the onClick function passed from the parent component
-    // console.log(`Added ${quantity} of ${title} to cart`)
   };
 
   return (
