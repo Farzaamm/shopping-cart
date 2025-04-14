@@ -37,6 +37,7 @@
     - input field for quantity
     - increment / decrement buttons
     - add to cart button (cart from lucid react)
+## Add to cart button should change to Add another one when the item already exists in the cart
 
 # footer
     **Shop**                    **company**         **support**
@@ -59,8 +60,13 @@
 ~~ fetch the products from the api ~~
 ~~ design the cards accordingly ~~
 ~~ put stars instead of text for rating ~~
-~~ cart component
-~~ Add to cart button should add items to the cart
+~~ cart component ~~
+~~ Add to cart button should add items to the cart ~~
+~~ checkout function
+~~ css for the cart.jsx
+~~ changing Add to cart button to add another one in ProductCard.jsx
+
+
 
 * shopping cart:
 ~~ shopping card 

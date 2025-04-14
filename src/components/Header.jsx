@@ -10,7 +10,7 @@ export default function Header() {
       <ul className='flex'>
         <li>
           <div className='list-item'>
-            <House size={40}/>
+            <Link to="/"><House size={40}/></Link>
           </div>
           <div className='list-item'>
             <Link to="/" >Home</Link>
@@ -18,7 +18,7 @@ export default function Header() {
         </li>
         <li>
           <div className='list-item'>
-            <ShoppingBag size={40}/>
+            <Link to="/shopping"><ShoppingBag size={40}/></Link>
           </div>
           <div className='list-item'>
             <Link to="/shopping">Shopping</Link>
@@ -28,7 +28,7 @@ export default function Header() {
       <ul>
         <li>
           <div className='list-item'>
-            <p>{totalItems}</p>
+            {totalItems > 0 && <p className='cart-count'>{totalItems}</p>}
             <Link to="/cart"><ShoppingCart size={40}/></Link>
           </div>
         </li>

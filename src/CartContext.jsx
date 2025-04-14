@@ -41,7 +41,7 @@ export function CartProvider( { children }) {
     }
     const handleUpdateTotalPrice = () => {
       const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-      setTotalPrice(total);
+      setTotalPrice(Number(total.toFixed(2))); // Set total price to 2 decimal places
     }
     const handleUpdateTotalItems = () => {
       const total = cartItems.reduce((acc, item) => acc + item.quantity, 0);
