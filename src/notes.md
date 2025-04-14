@@ -16,8 +16,8 @@
         - home icon + Home
         - shopping bag icon + Shopping
     
-    # --use <link /> instead of <a>-- 
-    * clicking on the svg icon doesn't do anything
+~~ # --use <link /> instead of <a>-- ~~
+~~ clicking on the svg icon doesn't do anything ~~
 
 # navbar
     home
@@ -56,14 +56,14 @@
 * Header component:
 ~~ nav elements ~~
 
-* shopping component: 
+~~* shopping component: ~~
 ~~ fetch the products from the api ~~
 ~~ design the cards accordingly ~~
 ~~ put stars instead of text for rating ~~
 ~~ cart component ~~
 ~~ Add to cart button should add items to the cart ~~
-~~ checkout function
-~~ css for the cart.jsx
+~~ checkout function ~~
+~~ css for the cart.jsx ~~
 ~~ changing Add to cart button to add another one in ProductCard.jsx
 
 

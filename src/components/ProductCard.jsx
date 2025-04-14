@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 
 export default function ProductCard({
@@ -14,9 +13,12 @@ export default function ProductCard({
   onClick,
 }) {
 
+  const [isAdded, setIsAdded] = useState(false) // State to track if the product is added to the cart
   const [quantity, setQuantity] = useState(1)
 // Save the product details when the user clicks the "Add to Cart" button to be used in the parent component
-  const handleAddToCart = () => {
+
+const handleAddToCart = () => {
+    setIsAdded(true); // Set the state to true when the product is added to the cart
     onClick({category, id, image, title, description, price, quantity}); // Call the onClick function passed from the parent component
   };
 
@@ -36,7 +38,9 @@ export default function ProductCard({
         <p>${price}</p>
       </div>
       <div className='product-quantity-container'>
-        <button onClick={handleAddToCart}>Add to Cart</button>
+        <button onClick={handleAddToCart}>
+          {!isAdded ? "Add to Cart" : "Add another one"}
+        </button>
       </div>
     </div>
   )
