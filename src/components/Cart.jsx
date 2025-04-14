@@ -39,7 +39,7 @@ export default function Cart() {
                       <p>{item.quantity}</p>
                       <CirclePlus className='plus-minus' onClick={() => handleAddToCart(item)} />
                     </div>
-                    <p >Subtotal: <span className='subtotal' >${item.price * item.quantity}</span></p>
+                    <p>Subtotal: <span className='subtotal' >${item.price * item.quantity}</span></p>
                   </div>
                   <button 
                     className="remove-button" 
