@@ -80,7 +80,7 @@ a {
 button {
   width: 100%;
   padding: 1rem;
-  background-color: rgb(206, 188, 20);
+  background-color: rgb(251, 226, 8);
   border: none;
   border-radius: 10px;
   font-size: large;
@@ -90,7 +90,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(230, 211, 48);
+  background-color:rgb(236, 213, 12);
 }
 
 .shopping-mall-bg-img {
@@ -274,6 +274,7 @@ button:hover {
 
 .remove-button {
   width: 10rem;
+  height: 100%;
   background-color: #F5F5DC;
   color: rgb(0, 0, 0);
   padding: .5rem;
@@ -281,6 +282,9 @@ button:hover {
   border: none;
   cursor: pointer;
   box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .remove-button:hover {
