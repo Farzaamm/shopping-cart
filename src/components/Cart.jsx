@@ -5,7 +5,7 @@ import Footer from './Footer';
 import { CircleMinus, CirclePlus } from 'lucide-react';
 
 export default function Cart() {
-  const { cartItems, totalPrice, totalItems, handleAddToCart, handleRemoveFromCart, handleClearCart } = useContext(CartContext);
+  const { cartItems, totalPrice, totalItems, handleAddToCart, handleDecreaseQuantity, handleRemoveFromCart, handleClearCart } = useContext(CartContext);
   const handleRemove = (item) => {
     handleRemoveFromCart(item);
   };
@@ -22,6 +22,7 @@ export default function Cart() {
           <p>Your cart is empty.</p>
         ) : (
           <>
+            <button onClick={() => console.log(totalItems)}>print</button>
             <div className="cart-items">
               {cartItems.map((item) => (
                 <div key={item.id} className="cart-item">
@@ -29,9 +30,9 @@ export default function Cart() {
                   <div className="cart-item-info">
                     <h3>{item.title}</h3>
                     <p>Price: ${item.price}</p>
-                    <CircleMinus className="remove-icon" onClick={() => console.log(item.quantity)} />
+                    <CircleMinus className="remove-icon" onClick={() => handleDecreaseQuantity(item)} />
                     <p>{item.quantity}</p>
-                    <CirclePlus className="add-icon" onClick={() => console.log(item.quantity)} />
+                    <CirclePlus className="add-icon" onClick={() => handleAddToCart(item)} />
                     <p>Subtotal: ${item.price * item.quantity}</p>
                     <button onClick={() => handleRemove(item)}>Remove</button>
                   </div>

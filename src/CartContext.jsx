@@ -16,10 +16,20 @@ export function CartProvider( { children }) {
       const existingItem = cartItems.find(cartItem => cartItem.id === item.id);
       if(existingItem) {
         setCartItems(cartItems.map(cartItem => 
-          cartItem.id === item.id ? {...cartItem, quantity: item.quantity} : cartItem
+          cartItem.id === item.id ? {...cartItem, quantity: cartItem.quantity + 1} : cartItem //every click on Add to cart button will increase the quantity of the item in the cart by 1
         ));
       } else {
         setCartItems([...cartItems, item]);
+      }
+    }
+
+    const handleDecreaseQuantity = (item) => {
+      if (item.quantity === 1) {
+        setCartItems(cartItems.filter(cartItem => cartItem.id !== item.id)); // Remove item from cart if quantity is 1
+      } else {
+        setCartItems(cartItems.map(cartItem => 
+          cartItem.id === item.id ? {...cartItem, quantity: cartItem.quantity - 1} : cartItem // Decrease quantity by 1
+        ));
       }
     }
     const handleRemoveFromCart = (item) => {
@@ -43,6 +53,7 @@ export function CartProvider( { children }) {
         totalPrice, 
         totalItems, 
         handleAddToCart, 
+        handleDecreaseQuantity,
         handleRemoveFromCart, 
         handleClearCart,
     }}>

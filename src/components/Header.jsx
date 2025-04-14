@@ -1,8 +1,10 @@
-import React from 'react'
+import { useContext } from 'react'
 import { House, ShoppingBag, ShoppingCart } from 'lucide-react';
 import { Link } from "react-router-dom";
+import { CartContext } from '../CartContext';
 
 export default function Header() {
+  const { totalItems } = useContext(CartContext);
   return (
     <nav>
       <ul className='flex'>
@@ -26,6 +28,7 @@ export default function Header() {
       <ul>
         <li>
           <div className='list-item'>
+            <p>{totalItems}</p>
             <Link to="/cart"><ShoppingCart size={40}/></Link>
           </div>
         </li>
